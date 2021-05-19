@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/bingo.github.io/static/css/main.5f944fe5.chunk.css",
+    "main.js": "/bingo.github.io/static/js/main.a2f12d12.chunk.js",
+    "main.js.map": "/bingo.github.io/static/js/main.a2f12d12.chunk.js.map",
+    "runtime-main.js": "/bingo.github.io/static/js/runtime-main.39a7c499.js",
+    "runtime-main.js.map": "/bingo.github.io/static/js/runtime-main.39a7c499.js.map",
+    "static/js/2.88414625.chunk.js": "/bingo.github.io/static/js/2.88414625.chunk.js",
+    "static/js/2.88414625.chunk.js.map": "/bingo.github.io/static/js/2.88414625.chunk.js.map",
+    "static/js/3.26da1102.chunk.js": "/bingo.github.io/static/js/3.26da1102.chunk.js",
+    "static/js/3.26da1102.chunk.js.map": "/bingo.github.io/static/js/3.26da1102.chunk.js.map",
+    "index.html": "/bingo.github.io/index.html",
+    "static/css/main.5f944fe5.chunk.css.map": "/bingo.github.io/static/css/main.5f944fe5.chunk.css.map",
+    "static/js/2.88414625.chunk.js.LICENSE.txt": "/bingo.github.io/static/js/2.88414625.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.39a7c499.js",
+    "static/js/2.88414625.chunk.js",
+    "static/css/main.5f944fe5.chunk.css",
+    "static/js/main.a2f12d12.chunk.js"
+  ]
+}
