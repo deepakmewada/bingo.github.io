@@ -19,36 +19,30 @@ export default function Offline() {
   const [list, setList] = useState([]);
   const [count, setCount] = useState(0);
   const [winLen, setWinLen] = useState(0);
-  const [winArr, setWinArr] = useState([]);
-  const [pending, setPending] = useState(26);
+  const [pending, setPending] = useState(25);
 
   useEffect(() => {
     resetBingo();
   }, []);
 
+  console.log("count", count);
+
   useEffect(() => {
-    if (count == 25) {
+    if (count === 25) {
       let win = 0;
-      let winArrz = [];
       let lastArr = null;
       let filterData = list.filter((item) => item.not === true);
       let newArr = [];
-      filterData.map((item) => {
-        newArr.push(item.num);
-      });
+      filterData.map((item) => newArr.push(item.num));
       for (let i = 0; i < bingoArray.length; i++) {
         if (bingoArray[i].every((j) => newArr.includes(j))) {
           if (lastArr !== i) {
             win += 1;
             lastArr = i;
-            winArrz.push(bingoArray[i]);
           }
         }
       }
-      setWinArr([...winArrz]);
       setWinLen(win);
-      setPending(pending - 1);
-      console.log(newArr);
     }
   }, [list]);
 
@@ -61,6 +55,7 @@ export default function Offline() {
     setList(listArr);
     setCount(0);
     setWinLen(0);
+    setPending(25);
   };
 
   const randomNumber = () => {
@@ -78,9 +73,12 @@ export default function Offline() {
       }
       for (let x = 1; x < 26; x++) {
         someOther[x - 1].value = ranNums[x - 1];
+        delete someOther[x - 1].not;
       }
       setList([...someOther]);
       setCount(25);
+      setWinLen(0);
+      setPending(25);
     }
   };
 
@@ -100,6 +98,7 @@ export default function Offline() {
       }
       setList([...newArr]);
     }
+    setPending(pending - 1);
   };
 
   return (
@@ -125,22 +124,17 @@ export default function Offline() {
             ))}
           {winLen > 4 ? <div className="overlay">You Won</div> : null}
         </div>
+        <div className="text-center mt-2 mb-4">
+          Pending Number Count : {pending}
+        </div>
         <div className="btn-wrap">
-          <button
-            onClick={() => randomNumber()}
-            className="btn btn-sm btn-dark"
-          >
-            Random
-          </button>{" "}
-          &nbsp;
-          <button
-            onClick={() => resetBingo()}
-            className="btn btn-sm btn-danger"
-          >
-            Reset
+          <button onClick={() => randomNumber()} className="btn btn-dark">
+            Generate Random Number
+          </button>
+          <button onClick={() => resetBingo()} className="btn btn-danger">
+            Reset Number
           </button>
         </div>
-        <span>Pending Number Count : {count == "25" ? pending : null}</span>
       </div>
     </div>
   );

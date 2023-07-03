@@ -1,106 +1,113 @@
-@import "https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap";
 
-html,body {
-padding:0;
-margin:0;
-font-family:'Kalam',cursive
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Sans', cursive
 }
 
 a {
-color:inherit;
-text-decoration:none
+    color: inherit;
+    text-decoration: none
 }
 
 * {
-box-sizing:border-box
+    box-sizing: border-box
 }
 
 body {
-margin:0;
-background-color:#187bcd
+    margin: 0;
+    background-color: #187bcd
 }
 
 .AppWrap {
-max-width:340px;
-margin:0 auto
+    max-width: 340px;
+    margin: 0 auto
 }
 
 h1 {
-margin:40px auto 30px!important;
-color:#fff;
-text-align:center;
-display:flex;
-justify-content:center
+    margin: 40px auto 30px !important;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center
 }
 
 .list {
-display:flex;
-flex-wrap:wrap;
-margin:0 -5px;
-position:relative
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    position: relative
 }
 
-.list > div {
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-background-color:#1167b1;
-color:#fff;
-margin:0 5px 10px;
-font-size:1.8rem;
-cursor:pointer
+.list>div {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1167b1;
+    color: #fff;
+    margin: 0 5px 10px;
+    font-size: 1.8rem;
+    cursor: pointer
 }
 
-.list > div.disabled {
-position:relative;
-opacity:.6
+.list>div.disabled {
+    position: relative;
+    opacity: .6
 }
 
-.list > div.disabled:after {
-content:'';
-display:inline-block;
-width:3px;
-height:80%;
-background-color:red;
-position:absolute;
-left:50%;
-transform:rotate(60deg) translateX(-50%);
-margin-left:-3px
+.list>div.disabled:after {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 80%;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    transform: rotate(60deg) translateX(-50%);
+    margin-left: -3px
 }
 
-h1 > span {
-margin:0 5px
+h1>span {
+    margin: 0 5px
 }
 
 .line {
-position:relative
+    position: relative
 }
 
 .line:after {
-content:'';
-display:inline-block;
-width:3px;
-height:100%;
-background-color:red;
-position:absolute;
-left:50%;
-transform:rotate(60deg) translateX(-50%);
-margin-left:-3px
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    transform: rotate(60deg) translateX(-50%);
+    margin-left: -3px
 }
 
-.list > .overlay {
-position:absolute;
-width:100%;
-height:100%;
-z-index:2;
-background:rgba(255,255,255,0.1);
-margin:0;
-top:-5px
+.list>.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0;
+    top: -5px
 }
 
 .btn-wrap {
-display:flex;
-justify-content:space-between
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-wrap .btn {
+    width: 100%;
 }
